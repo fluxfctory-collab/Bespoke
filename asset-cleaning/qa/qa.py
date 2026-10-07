@@ -409,6 +409,10 @@ def export(browser, base, dest):
         p = dest / f"mobile-390-hero-and-applications{suffix}.png"
         page.screenshot(path=str(p), full_page=True, clip={"x": 0, "y": 0, "width": 390, "height": bottom})
         made[p.name] = None
+        if scale == 1:
+            p = dest / "mobile-390-full-page.png"  # additional, for internal review
+            page.screenshot(path=str(p), full_page=True)
+            made[p.name] = None
         ctx.close()
     return list(made)
 

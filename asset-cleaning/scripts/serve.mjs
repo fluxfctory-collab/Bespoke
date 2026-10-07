@@ -16,6 +16,9 @@ const types = {
   '.webp': 'image/webp',
   '.png': 'image/png',
   '.mp4': 'video/mp4',
+  '.webm': 'video/webm',
+  '.woff2': 'font/woff2',
+  '.txt': 'text/plain; charset=utf-8',
 };
 
 createServer(async (req, res) => {

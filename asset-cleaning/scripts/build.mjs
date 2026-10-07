@@ -38,7 +38,6 @@ for (const spec of content.system.specs) {
 const rich = (s) =>
   escapeHtml(s)
     .replace(/(\d) (kg|metres|bar|litres|square)\b/g, '$1&nbsp;$2')
-    .replace(/\b(around|about|over|to) (\d)/gi, '$1&nbsp;$2')
     .replace(/\bUK SORA\b/g, 'UK&nbsp;SORA')
     .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
     .replace(/\(\((.+?)\)\)/g, '<span class="line">$1</span>')
@@ -93,7 +92,8 @@ const sections = {
         <h1 class="hero__title" id="hero-title">${rich(h.headline)}</h1>
         <figure class="hero__media">
           ${picture(h.image, {
-            sizes: '(min-width: 1200px) 125vw, 100vw',
+            // Cover crops: the drawn image is wider than its box below 1200 px (see docs/qa-report.md).
+            sizes: '(min-width: 1200px) 125vw, (min-width: 694px) max(100vw, 854px), 124vw',
             loading: 'eager',
             priority: true,
             className: 'hero__image',
@@ -121,7 +121,7 @@ const sections = {
               .join('\n            ')}
           </ul>
           <figure class="applications__media" data-video-sources="${escapeHtml(JSON.stringify(a.video.sources))}" data-video-width="${a.video.width}" data-video-height="${a.video.height}">
-            ${picture(a.poster, { sizes: '(min-width: 1024px) 416px, (min-width: 640px) 360px, 100vw', className: 'applications__poster' })}
+            ${picture(a.poster, { sizes: '(min-width: 1440px) 416px, (min-width: 1024px) 30vw, (min-width: 640px) 40vw, calc(100vw - 40px)', className: 'applications__poster' })}
             <button class="play-button" type="button" hidden>
               <span class="visually-hidden">${escapeHtml(content._ui.play_video_label)}</span>
               <span class="play-button__icon" aria-hidden="true"></span>
@@ -300,7 +300,7 @@ const html = `<!doctype html>
   ${fontPreload}
   <link rel="preload" as="image" type="image/webp"
     imagesrcset="${srcset(content.hero.image, 'webp')}"
-    imagesizes="(min-width: 1200px) 125vw, 100vw">
+    imagesizes="(min-width: 1200px) 125vw, (min-width: 694px) max(100vw, 854px), 124vw">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body id="top">

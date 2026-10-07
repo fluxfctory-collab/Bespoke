@@ -33,13 +33,26 @@ The brochure and datasheet are not page copy and were not used for wording. They
 
 The page follows the copy PDF exactly in every case. S-01 matters most: the brochure figure (24.9 kg) is consistent with the "sub 25 kg limit" that the copy says is no longer required, while the copy and datasheet give 29 kg.
 
+## V2 presentation of the copy (no wording changes)
+
+V2 asks for typographic hierarchy inside some strings. This is done with presentation markers in `content/page.json` that never reach the page as text. The build refuses to run if a specification's `display` string, with its markers stripped, differs from its locked `value`. QA then checks every string against the PDF in the rendered DOM.
+
+| Marker | Rendering | Where |
+| --- | --- | --- |
+| `**…**` | `<strong>` (600–700) | Regulation: the operator/supplier sentence. Support band: "Parts are held in the United Kingdom", "repairs are carried out in our own workshop", "enhanced warranty option", "white label services" (V2 §10 permits this) |
+| `[[…]]` | Principal figure, 48 px (specs) / 60 px (evidence) | `60`, `15`, `170`, `29`, `300`, `550` |
+| `{{…}}` | Secondary figure, 34 px | `255` (peak pressure, visibly qualified as "up to … at peak") and `Radar,` |
+| `((…))` | A line group set on its own line | Pressure row's two clauses; "around 300 square metres an hour" and "about 550 square metres," in the evidence articles |
+
+"Proven in the field": the single PDF paragraph is shown as its three complete sentences, in order (V2 §12): sentence 1 as the introduction, then sentences 2 and 3 as two side-by-side articles. Nothing is reworded, reordered or duplicated. The qualification follows directly beneath both.
+
 ## Copy handling rules applied
 
 - Every visitor-facing string is verbatim. `qa/qa.py` first checks each expected string against the PDF text, then checks that nothing in the PDF (apart from outline metadata) is left uncovered, and finally checks that each string is present in the rendered page at all nine tested widths. Last run: no missing strings, no uncovered PDF copy.
 - Outline labels were not displayed: "HEADER NAVIGATION", "1. HERO: HEADLINE", "HERO: OPENING", "Button: [ ]", "Figures for the specification panel (taken from the text above):", "Enquiry form fields:", "7. CLOSING AND ENQUIRY", "FOOTER", and "(links to our online store)".
 - Section labels from the PDF are shown in sentence case: "Applications", "The system", "What we supply", "Regulatory position", "Proven in the field".
 - The pipe separators in the navigation and the specialist-brands line are treated as separators. The brand names are listed under the supplied label "Specialist brands:".
-- Typography only: non-breaking spaces keep numbers with their units and qualifiers ("around 170 bar", "29 kg", "UK SORA"). Bold is used once, on "The Operational Authorisation is held by the operator and not the supplier."
+- Typography only: non-breaking spaces keep numbers with their units ("170 bar", "29 kg") and "UK SORA" together. Emphasis is limited to the markers above.
 - Apostrophes are kept as the PDF's straight apostrophes.
 - Not added: the "sole UK and Ireland dealer" statement, pricing, testimonials, logos of partners or regulators, certification badges, FAQ, benefits lists or extra calls to action.
 
@@ -51,7 +64,8 @@ The page follows the copy PDF exactly in every case. S-01 matters most: the broc
 | "Menu" | Accessible name of the mobile menu button (three CSS bars, no icon set) | No |
 | "Enquiry" | `h2` for the enquiry section, so the heading outline is complete | No (visually hidden) |
 | "Primary" | `aria-label` of the navigation | No |
-| Video label (see asset manifest) | `aria-label` on the video | No |
+| "Play video: a drone cleaning the cladding of an industrial building" | Accessible name of the play control on the applications poster (a CSS triangle, no icon set) | No |
+| Video label | `aria-label` on the player created after pressing play (copies the poster's alt text) | No |
 | Image alt text (see asset manifest) | `alt` attributes | No |
 | "Asset Cleaning \| The Bionic Eye" | Document `<title>` | Browser tab only |
 

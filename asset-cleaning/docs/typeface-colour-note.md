@@ -1,13 +1,21 @@
 # Typeface and colour note (contest deliverable 5: up to 100 words)
 
-Status: drafted from the **actual** choices in this AI-assisted internal prototype. If the entrant submits their own human-designed work, they must write the note for that design; this text describes this prototype only.
+Status: describes the **actual** V2 prototype. V2 (§19) supplies this text with the instruction "use only if the design actually follows it", and every design claim was checked against the build (below). If the entrant submits their own human-designed work, they must write the note for that design.
 
-Word count: **89 words** (`wc -w`, whitespace-separated; "19 px" counts as two words, "Arial/Helvetica" as one). Limit: 100.
-
----
-
-Typeface: Arial/Helvetica. No brand font or licence was supplied (the logo embeds Aileron only as a subset), so the page uses one system grotesque in two weights: tightly set bold headlines and 19 px body text for long technical and regulatory copy. Colour: The Bionic Eye identity is single-ink. The logo's CMYK black renders as #1D1D1B, used for type, primary buttons and the dark specification panel, against white and a pale stone grey, #F1F1EF. ABZ Innovation's orange is left to the photographs, so the real operations carry the colour.
+Word count: **58 words** (`wc -w`). Limit: 100.
 
 ---
 
-Evidence for each claim: `docs/brand-decisions.md` (logo fill CMYK 0/0/0/100 → #1D1D1B via the file's colour profile; no font files supplied; Aileron-Light subset embedded in the `.ai` logos; ABZ orange identified in `C10 Brochure.pdf`).
+Titillium Web continues the company's existing typographic identity, with a stronger display scale and clear specification hierarchy. Graphite and cyan retain the website's recognisable palette, while white product surfaces integrate the supplied photography. Dark text on cyan keeps primary actions legible. Pale blue-grey separates supporting content, and restrained rules and spacing give the page a precise, technical character.
+
+---
+
+| Claim | Matches the build? |
+| --- | --- |
+| Titillium Web; stronger display scale; specification hierarchy | Yes: self-hosted 400/600/700; H1 72 px; spec numerals 48 px with 22 px qualifiers and units |
+| Graphite and cyan | Yes: #29333C (regulation panel, footer, mobile hero), #00BFF3 (CTAs, matrix rule, play control, footer links) |
+| "existing typographic identity", "the website's recognisable palette" | **Not verified here.** These rest on the V2 author's observation of the live site, which this environment could not reach. Confirm with the client before submitting the note. |
+| White product surfaces integrate the photography | Yes: the C10 studio image is cropped to its bounds and sits on the white plate with no visible boundary |
+| Dark text on cyan | Yes: ink #112634 on cyan, 7.22:1 |
+| Pale blue-grey separates supporting content | Yes: #F3F7F9 behind the system plate, the support band, the enquiry section and the seventh application |
+| Restrained rules and spacing | Yes: 1 px rules (#E0E8ED); one cyan rule; one shadow (enquiry panel) |

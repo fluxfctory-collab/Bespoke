@@ -27,22 +27,38 @@ Running: /tmp/claude-0/-home-user-Bespoke/bcb830d0-08a7-5bad-a1b6-01b4fca707b2/s
     "nojs_menu_button_visible": false,
     "nojs_missing_copy": []
   },
+  "video": {
+    "button_visible": true,
+    "button_name": "Play video: a drone cleaning the cladding of an industrial building",
+    "video": true,
+    "currentSrc": "cladding-clean.webm",
+    "currentTime": 2.4,
+    "paused": false,
+    "error": null,
+    "controls": true,
+    "focused": true,
+    "errors": []
+  },
   "exports": [
     "desktop-1440-full-page.png",
     "mobile-390-hero-and-applications.png",
+    "mobile-390-full-page.png",
     "desktop-1440-full-page@2x.png",
     "mobile-390-hero-and-applications@2x.png"
   ]
 }
-{"width": 1440, "horizontal_overflow": false, "page_height": 5829, "contrast_min": 6.92, "missing_copy": 0, "not_rendered_visibly": [], "console": [], "errors": [], "contrast_failures": [], "clipped_text": []}
-{"width": 1280, "horizontal_overflow": false, "page_height": 5647, "contrast_min": 6.92, "missing_copy": 0, "not_rendered_visibly": [], "console": [], "errors": [], "contrast_failures": [], "clipped_text": []}
-{"width": 1024, "horizontal_overflow": false, "page_height": 5627, "contrast_min": 6.92, "missing_copy": 0, "not_rendered_visibly": [], "console": [], "errors": [], "contrast_failures": [], "clipped_text": []}
-{"width": 768, "horizontal_overflow": false, "page_height": 7441, "contrast_min": 6.92, "missing_copy": 0, "not_rendered_visibly": ["Solutions", "Support", "Regulation", "Sectors", "About Us", "Contact", "Shop"], "console": [], "errors": [], "contrast_failures": [], "clipped_text": []}
-{"width": 390, "horizontal_overflow": false, "page_height": 7728, "contrast_min": 6.92, "missing_copy": 0, "not_rendered_visibly": ["Solutions", "Support", "Regulation", "Sectors", "About Us", "Contact", "Shop"], "console": [], "errors": [], "contrast_failures": [], "clipped_text": [], "small_targets": []}
-{"width": 360, "horizontal_overflow": false, "page_height": 7865, "contrast_min": 6.92, "missing_copy": 0, "not_rendered_visibly": ["Solutions", "Support", "Regulation", "Sectors", "About Us", "Contact", "Shop"], "console": [], "errors": [], "contrast_failures": [], "clipped_text": [], "small_targets": []}
-{"width": 320, "horizontal_overflow": false, "page_height": 8162, "contrast_min": 6.92, "missing_copy": 0, "not_rendered_visibly": ["Solutions", "Support", "Regulation", "Sectors", "About Us", "Contact", "Shop"], "console": [], "errors": [], "contrast_failures": [], "clipped_text": [], "small_targets": []}
-{"width": 720, "horizontal_overflow": false, "page_height": 7417, "contrast_min": 6.92, "missing_copy": 0, "not_rendered_visibly": ["Solutions", "Support", "Regulation", "Sectors", "About Us", "Contact", "Shop"], "console": [], "errors": [], "contrast_failures": [], "clipped_text": []}
-{"width": 640, "horizontal_overflow": false, "page_height": 7266, "contrast_min": 6.92, "missing_copy": 0, "not_rendered_visibly": ["Solutions", "Support", "Regulation", "Sectors", "About Us", "Contact", "Shop"], "console": [], "errors": [], "contrast_failures": [], "clipped_text": []}
+{"width": 1920, "horizontal_overflow": false, "page_height": 6098, "contrast_min": 5.97, "missing_copy": 0, "not_rendered_visibly": [], "console": [], "errors": [], "contrast_failures": [], "clipped_text": []}
+{"width": 1440, "horizontal_overflow": false, "page_height": 5958, "contrast_min": 5.97, "missing_copy": 0, "not_rendered_visibly": [], "console": [], "errors": [], "contrast_failures": [], "clipped_text": []}
+{"width": 1280, "horizontal_overflow": false, "page_height": 5751, "contrast_min": 5.97, "missing_copy": 0, "not_rendered_visibly": [], "console": [], "errors": [], "contrast_failures": [], "clipped_text": []}
+{"width": 1200, "horizontal_overflow": false, "page_height": 5617, "contrast_min": 5.97, "missing_copy": 0, "not_rendered_visibly": [], "console": [], "errors": [], "contrast_failures": [], "clipped_text": []}
+{"width": 1024, "horizontal_overflow": false, "page_height": 5986, "contrast_min": 5.97, "missing_copy": 0, "not_rendered_visibly": [], "console": [], "errors": [], "contrast_failures": [], "clipped_text": []}
+{"width": 900, "horizontal_overflow": false, "page_height": 7194, "contrast_min": 5.97, "missing_copy": 0, "not_rendered_visibly": ["Solutions", "Support", "Regulation", "Sectors", "About Us", "Contact", "Shop"], "console": [], "errors": [], "contrast_failures": [], "clipped_text": []}
+{"width": 768, "horizontal_overflow": false, "page_height": 7114, "contrast_min": 5.97, "missing_copy": 0, "not_rendered_visibly": ["Solutions", "Support", "Regulation", "Sectors", "About Us", "Contact", "Shop"], "console": [], "errors": [], "contrast_failures": [], "clipped_text": []}
+{"width": 390, "horizontal_overflow": false, "page_height": 7854, "contrast_min": 5.97, "missing_copy": 0, "not_rendered_visibly": ["Solutions", "Support", "Regulation", "Sectors", "About Us", "Contact", "Shop"], "console": [], "errors": [], "contrast_failures": [], "clipped_text": [], "small_targets": []}
+{"width": 360, "horizontal_overflow": false, "page_height": 8041, "contrast_min": 5.97, "missing_copy": 0, "not_rendered_visibly": ["Solutions", "Support", "Regulation", "Sectors", "About Us", "Contact", "Shop"], "console": [], "errors": [], "contrast_failures": [], "clipped_text": [], "small_targets": []}
+{"width": 320, "horizontal_overflow": false, "page_height": 8652, "contrast_min": 5.97, "missing_copy": 0, "not_rendered_visibly": ["Solutions", "Support", "Regulation", "Sectors", "About Us", "Contact", "Shop"], "console": [], "errors": [], "contrast_failures": [], "clipped_text": [], "small_targets": []}
+{"width": 720, "horizontal_overflow": false, "page_height": 7045, "contrast_min": 5.97, "missing_copy": 0, "not_rendered_visibly": ["Solutions", "Support", "Regulation", "Sectors", "About Us", "Contact", "Shop"], "console": [], "errors": [], "contrast_failures": [], "clipped_text": []}
+{"width": 640, "horizontal_overflow": false, "page_height": 7042, "contrast_min": 5.97, "missing_copy": 0, "not_rendered_visibly": ["Solutions", "Support", "Regulation", "Sectors", "About Us", "Contact", "Shop"], "console": [], "errors": [], "contrast_failures": [], "clipped_text": []}
 {
  "width": 1440,
  "headings": [
@@ -66,12 +82,12 @@ Running: /tmp/claude-0/-home-user-Bespoke/bcb830d0-08a7-5bad-a1b6-01b4fca707b2/s
   "A Contact | outline solid 3px",
   "A Shop | outline solid 3px",
   "A Book a demonstration | outline solid 3px",
-  "VIDEO Video: a drone with a spray la | outline solid 3px",
-  "VIDEO Video: a drone with a spray la | outline none 0px",
-  "VIDEO Video: a drone with a spray la | outline none 0px",
+  "BUTTON Play video: a drone cleaning t | outline solid 3px",
   "INPUT name | outline solid 3px",
   "INPUT company | outline solid 3px",
-  "INPUT email | outline solid 3px"
+  "INPUT email | outline solid 3px",
+  "INPUT telephone | outline solid 3px",
+  "TEXTAREA sites | outline solid 3px"
  ],
  "hero_cta_enquiry_top": 16,
  "form_submit": {
@@ -88,7 +104,7 @@ Running: /tmp/claude-0/-home-user-Bespoke/bcb830d0-08a7-5bad-a1b6-01b4fca707b2/s
    "name": null,
    "label": "Name",
    "placeholder": null,
-   "height": 52
+   "height": 54
   },
   {
    "id": "company",
@@ -97,7 +113,7 @@ Running: /tmp/claude-0/-home-user-Bespoke/bcb830d0-08a7-5bad-a1b6-01b4fca707b2/s
    "name": null,
    "label": "Company",
    "placeholder": null,
-   "height": 52
+   "height": 54
   },
   {
    "id": "email",
@@ -106,7 +122,7 @@ Running: /tmp/claude-0/-home-user-Bespoke/bcb830d0-08a7-5bad-a1b6-01b4fca707b2/s
    "name": null,
    "label": "Email",
    "placeholder": null,
-   "height": 52
+   "height": 54
   },
   {
    "id": "telephone",
@@ -115,7 +131,7 @@ Running: /tmp/claude-0/-home-user-Bespoke/bcb830d0-08a7-5bad-a1b6-01b4fca707b2/s
    "name": null,
    "label": "Telephone",
    "placeholder": null,
-   "height": 52
+   "height": 54
   },
   {
    "id": "sites",
@@ -124,45 +140,44 @@ Running: /tmp/claude-0/-home-user-Bespoke/bcb830d0-08a7-5bad-a1b6-01b4fca707b2/s
    "name": null,
    "label": "Sites or work involved",
    "placeholder": null,
-   "height": 169
+   "height": 174
   }
  ],
  "ui_contrast": {
-  "input_border_vs_input_bg": 4.56,
-  "input_border_vs_section_bg": 4.03
+  "input_border_vs_input_bg": 3.51,
+  "input_border_vs_section_bg": 3.25
  },
- "video": {
-  "controls": true,
-  "autoplay": false,
-  "preload": "none",
-  "muted": false,
-  "paused": true,
-  "label": "Video: a drone with a spray lance cleaning the white cladding of an industrial building, fed by a hose from the ground"
- },
+ "video": null,
  "images": [
   {
    "src": "bionic-eye-logo-black.svg",
    "alt": "The Bionic Eye",
    "w": 2273,
-   "rendered": 117
+   "rendered": 104
   },
   {
-   "src": "hero-facade-1200.webp",
+   "src": "hero-facade-2400.webp",
    "alt": "A drone directing a water jet at the glazing of a stone-clad building, seen from below against a blue sky",
-   "w": 892,
-   "rendered": 813
+   "w": 1800,
+   "rendered": 1800
   },
   {
-   "src": "c10-side-900.webp",
+   "src": "cladding-frame-480.webp",
+   "alt": "A drone with a spray lance cleaning the white cladding of an industrial building, fed by a blue hose from the ground",
+   "w": 416,
+   "rendered": 416
+  },
+  {
+   "src": "c10-plate-700.webp",
    "alt": "The ABZ Innovation C10, side view, with its spray lance and hose connector",
-   "w": 806,
-   "rendered": 624
+   "w": 680,
+   "rendered": 662
   },
   {
    "src": "field-cladding-800.webp",
    "alt": "Two people on a gravel yard watching a drone spray the corrugated cladding of a green industrial building",
-   "w": 576,
-   "rendered": 515
+   "w": 740,
+   "rendered": 723
   },
   {
    "src": "bionic-eye-logo-white.svg",
@@ -192,15 +207,15 @@ Running: /tmp/claude-0/-home-user-Bespoke/bcb830d0-08a7-5bad-a1b6-01b4fca707b2/s
   "A  | outline solid 3px",
   "BUTTON Menu | outline solid 3px",
   "A Book a demonstration | outline solid 3px",
-  "VIDEO Video: a drone with a spray la | outline solid 3px",
-  "VIDEO Video: a drone with a spray la | outline none 0px",
-  "VIDEO Video: a drone with a spray la | outline none 0px",
+  "BUTTON Play video: a drone cleaning t | outline solid 3px",
   "INPUT name | outline solid 3px",
   "INPUT company | outline solid 3px",
   "INPUT email | outline solid 3px",
   "INPUT telephone | outline solid 3px",
   "TEXTAREA sites | outline solid 3px",
-  "BUTTON Discuss a requirement | outline solid 3px"
+  "BUTTON Discuss a requirement | outline solid 3px",
+  "A +44 1753 655886 | outline solid 3px",
+  "A info@thebioniceye.co.uk | outline solid 3px"
  ],
  "hero_cta_enquiry_top": 16,
  "form_submit": {
@@ -217,7 +232,7 @@ Running: /tmp/claude-0/-home-user-Bespoke/bcb830d0-08a7-5bad-a1b6-01b4fca707b2/s
    "name": null,
    "label": "Name",
    "placeholder": null,
-   "height": 52
+   "height": 54
   },
   {
    "id": "company",
@@ -226,7 +241,7 @@ Running: /tmp/claude-0/-home-user-Bespoke/bcb830d0-08a7-5bad-a1b6-01b4fca707b2/s
    "name": null,
    "label": "Company",
    "placeholder": null,
-   "height": 52
+   "height": 54
   },
   {
    "id": "email",
@@ -235,7 +250,7 @@ Running: /tmp/claude-0/-home-user-Bespoke/bcb830d0-08a7-5bad-a1b6-01b4fca707b2/s
    "name": null,
    "label": "Email",
    "placeholder": null,
-   "height": 52
+   "height": 54
   },
   {
    "id": "telephone",
@@ -244,7 +259,7 @@ Running: /tmp/claude-0/-home-user-Bespoke/bcb830d0-08a7-5bad-a1b6-01b4fca707b2/s
    "name": null,
    "label": "Telephone",
    "placeholder": null,
-   "height": 52
+   "height": 54
   },
   {
    "id": "sites",
@@ -253,39 +268,38 @@ Running: /tmp/claude-0/-home-user-Bespoke/bcb830d0-08a7-5bad-a1b6-01b4fca707b2/s
    "name": null,
    "label": "Sites or work involved",
    "placeholder": null,
-   "height": 169
+   "height": 174
   }
  ],
  "ui_contrast": {
-  "input_border_vs_input_bg": 4.56,
-  "input_border_vs_section_bg": 4.03
+  "input_border_vs_input_bg": 3.51,
+  "input_border_vs_section_bg": 3.25
  },
- "video": {
-  "controls": true,
-  "autoplay": false,
-  "preload": "none",
-  "muted": false,
-  "paused": true,
-  "label": "Video: a drone with a spray lance cleaning the white cladding of an industrial building, fed by a hose from the ground"
- },
+ "video": null,
  "images": [
   {
    "src": "bionic-eye-logo-black.svg",
    "alt": "The Bionic Eye",
    "w": 2273,
-   "rendered": 88
+   "rendered": 91
   },
   {
    "src": "hero-facade-800.webp",
    "alt": "A drone directing a water jet at the glazing of a stone-clad building, seen from below against a blue sky",
-   "w": 390,
+   "w": 483,
    "rendered": 390
   },
   {
-   "src": "c10-side-900.webp",
+   "src": "cladding-frame-480.webp",
+   "alt": "A drone with a spray lance cleaning the white cladding of an industrial building, fed by a blue hose from the ground",
+   "w": 349,
+   "rendered": 350
+  },
+  {
+   "src": "c10-plate-700.webp",
    "alt": "The ABZ Innovation C10, side view, with its spray lance and hose connector",
    "w": 390,
-   "rendered": 350
+   "rendered": 348
   },
   {
    "src": "field-cladding-800.webp",
@@ -297,7 +311,7 @@ Running: /tmp/claude-0/-home-user-Bespoke/bcb830d0-08a7-5bad-a1b6-01b4fca707b2/s
    "src": "bionic-eye-logo-white.svg",
    "alt": "The Bionic Eye",
    "w": 2273,
-   "rendered": 123
+   "rendered": 117
   }
  ]
 }

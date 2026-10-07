@@ -50,6 +50,7 @@
     var play = media && media.querySelector('.play-button');
     if (media && play) {
       play.hidden = false;
+      var original = Array.prototype.slice.call(media.childNodes);
       play.addEventListener('click', function () {
         var poster = media.querySelector('img');
         var video = document.createElement('video');
@@ -67,6 +68,13 @@
         video.controls = true;
         video.playsInline = true;
         video.setAttribute('aria-label', poster ? poster.alt : '');
+        // If no source can be decoded, put the still frame back rather than leave a dead player.
+        var sources = video.querySelectorAll('source');
+        sources[sources.length - 1].addEventListener('error', function () {
+          media.replaceChildren.apply(media, original);
+          media.classList.remove('is-playing');
+          play.hidden = true;
+        });
         media.replaceChildren(video);
         media.classList.add('is-playing');
         video.focus();

@@ -3,6 +3,54 @@
   "pdf_copy_not_covered": [],
   "widths": [
     {
+      "width": 1920,
+      "scroll_width": 1920,
+      "client_width": 1920,
+      "horizontal_overflow": false,
+      "missing_copy": [],
+      "not_rendered_visibly": [],
+      "console": [],
+      "page_errors": [],
+      "failed_requests": [],
+      "page_height": 6098,
+      "fonts": {
+        "faces": [
+          "Titillium Web 400 loaded",
+          "Titillium Web 600 loaded",
+          "Titillium Web 700 loaded"
+        ],
+        "ok": true,
+        "body": "\"Titillium Web\", Arial, Helvetica, sans-serif"
+      },
+      "hero_text_contrast": [
+        {
+          "element": ".hero__title",
+          "font_px": 72,
+          "worst_ratio_p95": 12.28,
+          "required": 3.0,
+          "pass": true
+        },
+        {
+          "element": ".hero__copy p:not(.hero__action)",
+          "font_px": 18,
+          "worst_ratio_p95": 9.87,
+          "required": 4.5,
+          "pass": true
+        },
+        {
+          "element": ".hero__copy p:not(.hero__action)",
+          "font_px": 18,
+          "worst_ratio_p95": 8.99,
+          "required": 4.5,
+          "pass": true
+        }
+      ],
+      "skip_link_hidden_unfocused": true,
+      "contrast_failures": [],
+      "contrast_min": 5.97,
+      "clipped_text": []
+    },
+    {
       "width": 1440,
       "scroll_width": 1440,
       "client_width": 1440,
@@ -12,10 +60,42 @@
       "console": [],
       "page_errors": [],
       "failed_requests": [],
-      "page_height": 5829,
+      "page_height": 5958,
+      "fonts": {
+        "faces": [
+          "Titillium Web 400 loaded",
+          "Titillium Web 600 loaded",
+          "Titillium Web 700 loaded"
+        ],
+        "ok": true,
+        "body": "\"Titillium Web\", Arial, Helvetica, sans-serif"
+      },
+      "hero_text_contrast": [
+        {
+          "element": ".hero__title",
+          "font_px": 72,
+          "worst_ratio_p95": 12.13,
+          "required": 3.0,
+          "pass": true
+        },
+        {
+          "element": ".hero__copy p:not(.hero__action)",
+          "font_px": 18,
+          "worst_ratio_p95": 8.86,
+          "required": 4.5,
+          "pass": true
+        },
+        {
+          "element": ".hero__copy p:not(.hero__action)",
+          "font_px": 18,
+          "worst_ratio_p95": 9.38,
+          "required": 4.5,
+          "pass": true
+        }
+      ],
       "skip_link_hidden_unfocused": true,
       "contrast_failures": [],
-      "contrast_min": 6.92,
+      "contrast_min": 5.97,
       "clipped_text": [],
       "headings": [
         "H1: Facade and structure cleaning without access equipment.",
@@ -31,25 +111,31 @@
           "src": "bionic-eye-logo-black.svg",
           "alt": "The Bionic Eye",
           "w": 2273,
-          "rendered": 117
+          "rendered": 104
         },
         {
-          "src": "hero-facade-1200.webp",
+          "src": "hero-facade-2400.webp",
           "alt": "A drone directing a water jet at the glazing of a stone-clad building, seen from below against a blue sky",
-          "w": 892,
-          "rendered": 813
+          "w": 1800,
+          "rendered": 1800
         },
         {
-          "src": "c10-side-900.webp",
+          "src": "cladding-frame-480.webp",
+          "alt": "A drone with a spray lance cleaning the white cladding of an industrial building, fed by a blue hose from the ground",
+          "w": 416,
+          "rendered": 416
+        },
+        {
+          "src": "c10-plate-700.webp",
           "alt": "The ABZ Innovation C10, side view, with its spray lance and hose connector",
-          "w": 806,
-          "rendered": 624
+          "w": 680,
+          "rendered": 662
         },
         {
           "src": "field-cladding-800.webp",
           "alt": "Two people on a gravel yard watching a drone spray the corrugated cladding of a green industrial building",
-          "w": 576,
-          "rendered": 515
+          "w": 740,
+          "rendered": 723
         },
         {
           "src": "bionic-eye-logo-white.svg",
@@ -66,7 +152,7 @@
           "name": null,
           "label": "Name",
           "placeholder": null,
-          "height": 52
+          "height": 54
         },
         {
           "id": "company",
@@ -75,7 +161,7 @@
           "name": null,
           "label": "Company",
           "placeholder": null,
-          "height": 52
+          "height": 54
         },
         {
           "id": "email",
@@ -84,7 +170,7 @@
           "name": null,
           "label": "Email",
           "placeholder": null,
-          "height": 52
+          "height": 54
         },
         {
           "id": "telephone",
@@ -93,7 +179,7 @@
           "name": null,
           "label": "Telephone",
           "placeholder": null,
-          "height": 52
+          "height": 54
         },
         {
           "id": "sites",
@@ -102,21 +188,14 @@
           "name": null,
           "label": "Sites or work involved",
           "placeholder": null,
-          "height": 169
+          "height": 174
         }
       ],
       "ui_contrast": {
-        "input_border_vs_input_bg": 4.56,
-        "input_border_vs_section_bg": 4.03
+        "input_border_vs_input_bg": 3.51,
+        "input_border_vs_section_bg": 3.25
       },
-      "video": {
-        "controls": true,
-        "autoplay": false,
-        "preload": "none",
-        "muted": false,
-        "paused": true,
-        "label": "Video: a drone with a spray lance cleaning the white cladding of an industrial building, fed by a hose from the ground"
-      },
+      "video": null,
       "first_tab": {
         "text": "Skip to content",
         "top": 8,
@@ -129,12 +208,12 @@
         "A Contact | outline solid 3px",
         "A Shop | outline solid 3px",
         "A Book a demonstration | outline solid 3px",
-        "VIDEO Video: a drone with a spray la | outline solid 3px",
-        "VIDEO Video: a drone with a spray la | outline none 0px",
-        "VIDEO Video: a drone with a spray la | outline none 0px",
+        "BUTTON Play video: a drone cleaning t | outline solid 3px",
         "INPUT name | outline solid 3px",
         "INPUT company | outline solid 3px",
-        "INPUT email | outline solid 3px"
+        "INPUT email | outline solid 3px",
+        "INPUT telephone | outline solid 3px",
+        "TEXTAREA sites | outline solid 3px"
       ],
       "hero_cta_enquiry_top": 16,
       "url_after_cta": "http://127.0.0.1:4173/#enquiry",
@@ -155,10 +234,90 @@
       "console": [],
       "page_errors": [],
       "failed_requests": [],
-      "page_height": 5647,
+      "page_height": 5751,
+      "fonts": {
+        "faces": [
+          "Titillium Web 400 loaded",
+          "Titillium Web 600 loaded",
+          "Titillium Web 700 loaded"
+        ],
+        "ok": true,
+        "body": "\"Titillium Web\", Arial, Helvetica, sans-serif"
+      },
+      "hero_text_contrast": [
+        {
+          "element": ".hero__title",
+          "font_px": 67.1244,
+          "worst_ratio_p95": 12.28,
+          "required": 3.0,
+          "pass": true
+        },
+        {
+          "element": ".hero__copy p:not(.hero__action)",
+          "font_px": 18,
+          "worst_ratio_p95": 8.87,
+          "required": 4.5,
+          "pass": true
+        },
+        {
+          "element": ".hero__copy p:not(.hero__action)",
+          "font_px": 18,
+          "worst_ratio_p95": 8.53,
+          "required": 4.5,
+          "pass": true
+        }
+      ],
       "skip_link_hidden_unfocused": true,
       "contrast_failures": [],
-      "contrast_min": 6.92,
+      "contrast_min": 5.97,
+      "clipped_text": []
+    },
+    {
+      "width": 1200,
+      "scroll_width": 1200,
+      "client_width": 1200,
+      "horizontal_overflow": false,
+      "missing_copy": [],
+      "not_rendered_visibly": [],
+      "console": [],
+      "page_errors": [],
+      "failed_requests": [],
+      "page_height": 5617,
+      "fonts": {
+        "faces": [
+          "Titillium Web 400 loaded",
+          "Titillium Web 600 loaded",
+          "Titillium Web 700 loaded"
+        ],
+        "ok": true,
+        "body": "\"Titillium Web\", Arial, Helvetica, sans-serif"
+      },
+      "hero_text_contrast": [
+        {
+          "element": ".hero__title",
+          "font_px": 64.686,
+          "worst_ratio_p95": 12.14,
+          "required": 3.0,
+          "pass": true
+        },
+        {
+          "element": ".hero__copy p:not(.hero__action)",
+          "font_px": 18,
+          "worst_ratio_p95": 8.42,
+          "required": 4.5,
+          "pass": true
+        },
+        {
+          "element": ".hero__copy p:not(.hero__action)",
+          "font_px": 18,
+          "worst_ratio_p95": 7.89,
+          "required": 4.5,
+          "pass": true
+        }
+      ],
+      "skip_link_hidden_unfocused": true,
+      "contrast_failures": [],
+      "contrast_min": 5.97,
       "clipped_text": []
     },
     {
@@ -171,10 +330,52 @@
       "console": [],
       "page_errors": [],
       "failed_requests": [],
-      "page_height": 5627,
+      "page_height": 5986,
+      "fonts": {
+        "faces": [
+          "Titillium Web 400 loaded",
+          "Titillium Web 600 loaded",
+          "Titillium Web 700 loaded"
+        ],
+        "ok": true,
+        "body": "\"Titillium Web\", Arial, Helvetica, sans-serif"
+      },
       "skip_link_hidden_unfocused": true,
       "contrast_failures": [],
-      "contrast_min": 6.92,
+      "contrast_min": 5.97,
+      "clipped_text": []
+    },
+    {
+      "width": 900,
+      "scroll_width": 900,
+      "client_width": 900,
+      "horizontal_overflow": false,
+      "missing_copy": [],
+      "not_rendered_visibly": [
+        "Solutions",
+        "Support",
+        "Regulation",
+        "Sectors",
+        "About Us",
+        "Contact",
+        "Shop"
+      ],
+      "console": [],
+      "page_errors": [],
+      "failed_requests": [],
+      "page_height": 7194,
+      "fonts": {
+        "faces": [
+          "Titillium Web 400 loaded",
+          "Titillium Web 600 loaded",
+          "Titillium Web 700 loaded"
+        ],
+        "ok": true,
+        "body": "\"Titillium Web\", Arial, Helvetica, sans-serif"
+      },
+      "skip_link_hidden_unfocused": true,
+      "contrast_failures": [],
+      "contrast_min": 5.97,
       "clipped_text": []
     },
     {
@@ -195,10 +396,19 @@
       "console": [],
       "page_errors": [],
       "failed_requests": [],
-      "page_height": 7441,
+      "page_height": 7114,
+      "fonts": {
+        "faces": [
+          "Titillium Web 400 loaded",
+          "Titillium Web 600 loaded",
+          "Titillium Web 700 loaded"
+        ],
+        "ok": true,
+        "body": "\"Titillium Web\", Arial, Helvetica, sans-serif"
+      },
       "skip_link_hidden_unfocused": true,
       "contrast_failures": [],
-      "contrast_min": 6.92,
+      "contrast_min": 5.97,
       "clipped_text": []
     },
     {
@@ -219,10 +429,19 @@
       "console": [],
       "page_errors": [],
       "failed_requests": [],
-      "page_height": 7728,
+      "page_height": 7854,
+      "fonts": {
+        "faces": [
+          "Titillium Web 400 loaded",
+          "Titillium Web 600 loaded",
+          "Titillium Web 700 loaded"
+        ],
+        "ok": true,
+        "body": "\"Titillium Web\", Arial, Helvetica, sans-serif"
+      },
       "skip_link_hidden_unfocused": true,
       "contrast_failures": [],
-      "contrast_min": 6.92,
+      "contrast_min": 5.97,
       "clipped_text": [],
       "small_targets": [],
       "headings": [
@@ -239,19 +458,25 @@
           "src": "bionic-eye-logo-black.svg",
           "alt": "The Bionic Eye",
           "w": 2273,
-          "rendered": 88
+          "rendered": 91
         },
         {
           "src": "hero-facade-800.webp",
           "alt": "A drone directing a water jet at the glazing of a stone-clad building, seen from below against a blue sky",
-          "w": 390,
+          "w": 483,
           "rendered": 390
         },
         {
-          "src": "c10-side-900.webp",
+          "src": "cladding-frame-480.webp",
+          "alt": "A drone with a spray lance cleaning the white cladding of an industrial building, fed by a blue hose from the ground",
+          "w": 349,
+          "rendered": 350
+        },
+        {
+          "src": "c10-plate-700.webp",
           "alt": "The ABZ Innovation C10, side view, with its spray lance and hose connector",
           "w": 390,
-          "rendered": 350
+          "rendered": 348
         },
         {
           "src": "field-cladding-800.webp",
@@ -263,7 +488,7 @@
           "src": "bionic-eye-logo-white.svg",
           "alt": "The Bionic Eye",
           "w": 2273,
-          "rendered": 123
+          "rendered": 117
         }
       ],
       "form": [
@@ -274,7 +499,7 @@
           "name": null,
           "label": "Name",
           "placeholder": null,
-          "height": 52
+          "height": 54
         },
         {
           "id": "company",
@@ -283,7 +508,7 @@
           "name": null,
           "label": "Company",
           "placeholder": null,
-          "height": 52
+          "height": 54
         },
         {
           "id": "email",
@@ -292,7 +517,7 @@
           "name": null,
           "label": "Email",
           "placeholder": null,
-          "height": 52
+          "height": 54
         },
         {
           "id": "telephone",
@@ -301,7 +526,7 @@
           "name": null,
           "label": "Telephone",
           "placeholder": null,
-          "height": 52
+          "height": 54
         },
         {
           "id": "sites",
@@ -310,21 +535,14 @@
           "name": null,
           "label": "Sites or work involved",
           "placeholder": null,
-          "height": 169
+          "height": 174
         }
       ],
       "ui_contrast": {
-        "input_border_vs_input_bg": 4.56,
-        "input_border_vs_section_bg": 4.03
+        "input_border_vs_input_bg": 3.51,
+        "input_border_vs_section_bg": 3.25
       },
-      "video": {
-        "controls": true,
-        "autoplay": false,
-        "preload": "none",
-        "muted": false,
-        "paused": true,
-        "label": "Video: a drone with a spray lance cleaning the white cladding of an industrial building, fed by a hose from the ground"
-      },
+      "video": null,
       "first_tab": {
         "text": "Skip to content",
         "top": 8,
@@ -334,15 +552,15 @@
         "A  | outline solid 3px",
         "BUTTON Menu | outline solid 3px",
         "A Book a demonstration | outline solid 3px",
-        "VIDEO Video: a drone with a spray la | outline solid 3px",
-        "VIDEO Video: a drone with a spray la | outline none 0px",
-        "VIDEO Video: a drone with a spray la | outline none 0px",
+        "BUTTON Play video: a drone cleaning t | outline solid 3px",
         "INPUT name | outline solid 3px",
         "INPUT company | outline solid 3px",
         "INPUT email | outline solid 3px",
         "INPUT telephone | outline solid 3px",
         "TEXTAREA sites | outline solid 3px",
-        "BUTTON Discuss a requirement | outline solid 3px"
+        "BUTTON Discuss a requirement | outline solid 3px",
+        "A +44 1753 655886 | outline solid 3px",
+        "A info@thebioniceye.co.uk | outline solid 3px"
       ],
       "hero_cta_enquiry_top": 16,
       "url_after_cta": "http://127.0.0.1:4173/#enquiry",
@@ -371,10 +589,19 @@
       "console": [],
       "page_errors": [],
       "failed_requests": [],
-      "page_height": 7865,
+      "page_height": 8041,
+      "fonts": {
+        "faces": [
+          "Titillium Web 400 loaded",
+          "Titillium Web 600 loaded",
+          "Titillium Web 700 loaded"
+        ],
+        "ok": true,
+        "body": "\"Titillium Web\", Arial, Helvetica, sans-serif"
+      },
       "skip_link_hidden_unfocused": true,
       "contrast_failures": [],
-      "contrast_min": 6.92,
+      "contrast_min": 5.97,
       "clipped_text": [],
       "small_targets": []
     },
@@ -396,10 +623,19 @@
       "console": [],
       "page_errors": [],
       "failed_requests": [],
-      "page_height": 8162,
+      "page_height": 8652,
+      "fonts": {
+        "faces": [
+          "Titillium Web 400 loaded",
+          "Titillium Web 600 loaded",
+          "Titillium Web 700 loaded"
+        ],
+        "ok": true,
+        "body": "\"Titillium Web\", Arial, Helvetica, sans-serif"
+      },
       "skip_link_hidden_unfocused": true,
       "contrast_failures": [],
-      "contrast_min": 6.92,
+      "contrast_min": 5.97,
       "clipped_text": [],
       "small_targets": []
     },
@@ -421,10 +657,19 @@
       "console": [],
       "page_errors": [],
       "failed_requests": [],
-      "page_height": 7417,
+      "page_height": 7045,
+      "fonts": {
+        "faces": [
+          "Titillium Web 400 loaded",
+          "Titillium Web 600 loaded",
+          "Titillium Web 700 loaded"
+        ],
+        "ok": true,
+        "body": "\"Titillium Web\", Arial, Helvetica, sans-serif"
+      },
       "skip_link_hidden_unfocused": true,
       "contrast_failures": [],
-      "contrast_min": 6.92,
+      "contrast_min": 5.97,
       "clipped_text": []
     },
     {
@@ -445,10 +690,19 @@
       "console": [],
       "page_errors": [],
       "failed_requests": [],
-      "page_height": 7266,
+      "page_height": 7042,
+      "fonts": {
+        "faces": [
+          "Titillium Web 400 loaded",
+          "Titillium Web 600 loaded",
+          "Titillium Web 700 loaded"
+        ],
+        "ok": true,
+        "body": "\"Titillium Web\", Arial, Helvetica, sans-serif"
+      },
       "skip_link_hidden_unfocused": true,
       "contrast_failures": [],
-      "contrast_min": 6.92,
+      "contrast_min": 5.97,
       "clipped_text": []
     }
   ],
@@ -471,9 +725,22 @@
     "nojs_menu_button_visible": false,
     "nojs_missing_copy": []
   },
+  "video": {
+    "button_visible": true,
+    "button_name": "Play video: a drone cleaning the cladding of an industrial building",
+    "video": true,
+    "currentSrc": "cladding-clean.webm",
+    "currentTime": 2.4,
+    "paused": false,
+    "error": null,
+    "controls": true,
+    "focused": true,
+    "errors": []
+  },
   "exports": [
     "desktop-1440-full-page.png",
     "mobile-390-hero-and-applications.png",
+    "mobile-390-full-page.png",
     "desktop-1440-full-page@2x.png",
     "mobile-390-hero-and-applications@2x.png"
   ]
