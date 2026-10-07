@@ -5,3 +5,4 @@ asset-cleaning/source-pack/
 # Build output (regenerate with: npm run build)
 asset-cleaning/dist/
 node_modules/
+__pycache__/
