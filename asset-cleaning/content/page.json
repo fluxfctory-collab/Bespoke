@@ -1,11 +1,11 @@
 {
-  "_source": "sources/Asset_Cleaning_Contest_Copy.pdf (The Bionic Eye Ltd, October 2026, 2 pages). Visitor-facing strings below are verbatim from that PDF. **double asterisks** mark typographic emphasis only and are not part of the copy. Strings under _ui are interface labels added for accessibility; they are documented in docs/source-decisions.md.",
+  "_source": "sources/Asset_Cleaning_Contest_Copy.pdf (The Bionic Eye Ltd, October 2026, 2 pages). Visitor-facing strings are verbatim from that PDF. Presentation markers are not part of the copy and never reach the page as text: **x** emphasis, [[x]] principal figure, {{x}} secondary figure, ((x)) a line group set on its own line. Stripping the markers must reproduce the PDF wording exactly (checked by qa/qa.py). Strings under _ui are interface labels added for accessibility (docs/source-decisions.md).",
   "_ui": {
     "skip_link": "Skip to content",
     "menu_button_label": "Menu",
     "enquiry_heading_hidden": "Enquiry",
     "primary_nav_label": "Primary",
-    "video_label": "Video: a drone with a spray lance cleaning the white cladding of an industrial building, fed by a hose from the ground"
+    "play_video_label": "Play video: a drone cleaning the cladding of an industrial building"
   },
   "meta": {
     "lang": "en-GB",
@@ -15,12 +15,12 @@
     "_source": "PDF p1, HEADER NAVIGATION",
     "items": [
       { "label": "Solutions", "href": null, "status": "unresolved: no destination in the pack" },
-      { "label": "Support", "href": "#supply", "status": "prototype anchor: What we supply section (parts, repairs, warranty, training)" },
+      { "label": "Support", "href": "#supply", "status": "prototype anchor: What we supply section" },
       { "label": "Regulation", "href": "#regulation", "status": "prototype anchor: Regulatory position section" },
       { "label": "Sectors", "href": null, "status": "unresolved: no destination in the pack" },
       { "label": "About Us", "href": null, "status": "unresolved: no destination in the pack" },
       { "label": "Contact", "href": "#enquiry", "status": "prototype anchor: enquiry section" },
-      { "label": "Shop", "href": "https://shop.thebioniceye.co.uk", "status": "verified in pack: C10 Brochure.pdf p14 lists shop.thebioniceye.co.uk; PDF says Shop links to our online store" }
+      { "label": "Shop", "href": "https://shop.thebioniceye.co.uk", "status": "verified in pack: C10 Brochure.pdf p14" }
     ]
   },
   "hero": {
@@ -37,12 +37,10 @@
     "cta_href": "#enquiry",
     "image": {
       "stem": "hero-facade",
-      "widths": [800, 1200, 1600, 2400],
+      "widths": [800, 1200, 1600, 2400, 3200],
       "width": 6000,
       "height": 3376,
-      "alt": "A drone directing a water jet at the glazing of a stone-clad building, seen from below against a blue sky",
-      "focal_desktop": "64% 40%",
-      "focal_mobile": "62% 35%"
+      "alt": "A drone directing a water jet at the glazing of a stone-clad building, seen from below against a blue sky"
     }
   },
   "applications": {
@@ -57,11 +55,20 @@
       "Graffiti removal",
       "Surface coating and treatment, currently in development"
     ],
-    "video": {
-      "src": "assets/video/cladding-clean.mp4",
-      "poster": "assets/video/cladding-clean-poster",
+    "poster": {
+      "stem": "cladding-frame",
+      "widths": [480, 720],
       "width": 720,
-      "height": 1280
+      "height": 1280,
+      "alt": "A drone with a spray lance cleaning the white cladding of an industrial building, fed by a blue hose from the ground"
+    },
+    "video": {
+      "width": 720,
+      "height": 1280,
+      "sources": [
+        { "src": "assets/video/cladding-clean.webm", "type": "video/webm; codecs=\"vp9, opus\"" },
+        { "src": "assets/video/cladding-clean.mp4", "type": "video/mp4; codecs=\"avc1.640020, mp4a.40.2\"" }
+      ]
     }
   },
   "system": {
@@ -72,17 +79,17 @@
       "Maximum take-off mass is 29 kg. The sub 25 kg limit that applied under the earlier authorisation route is not required under UK SORA."
     ],
     "specs": [
-      { "label": "Working height", "value": "Over 60 metres" },
-      { "label": "Flow rate", "value": "Up to 15 litres per minute" },
-      { "label": "Working pressure", "value": "Around 170 bar at the nozzle, up to 255 bar at peak" },
-      { "label": "Collision avoidance", "value": "Radar, with standoff control" },
-      { "label": "Maximum take-off mass", "value": "29 kg" }
+      { "label": "Working height", "value": "Over 60 metres", "display": "Over [[60]] metres" },
+      { "label": "Flow rate", "value": "Up to 15 litres per minute", "display": "Up to [[15]] litres per minute" },
+      { "label": "Working pressure", "value": "Around 170 bar at the nozzle, up to 255 bar at peak", "display": "((Around [[170]] bar at the nozzle,)) ((up to {{255}} bar at peak))" },
+      { "label": "Collision avoidance", "value": "Radar, with standoff control", "display": "{{Radar,}} with standoff control" },
+      { "label": "Maximum take-off mass", "value": "29 kg", "display": "[[29]] kg" }
     ],
     "image": {
-      "stem": "c10-side",
-      "widths": [900, 1400, 2000],
-      "width": 8640,
-      "height": 5760,
+      "stem": "c10-plate",
+      "widths": [700, 1100, 1400, 2000],
+      "width": 7704,
+      "height": 3520,
       "alt": "The ABZ Innovation C10, side view, with its spray lance and hose connector"
     }
   },
@@ -92,7 +99,7 @@
     "paragraphs": [
       "The drone, pressure system and nozzle set specified against your surfaces.",
       "Pilot training is available as an additional service, and we can advise on preparing the operations manual and supporting documentation required for CAA authorisation.",
-      "Parts are held in the United Kingdom, repairs are carried out in our own workshop, and the enhanced warranty option provides priority servicing and maintenance, with loan equipment where parts are unavailable. We also offer white label services, arranged in advance, giving clients additional capacity."
+      "**Parts are held in the United Kingdom**, **repairs are carried out in our own workshop**, and the **enhanced warranty option** provides priority servicing and maintenance, with loan equipment where parts are unavailable. We also offer **white label services**, arranged in advance, giving clients additional capacity."
     ],
     "image": {
       "stem": "field-cladding",
@@ -112,9 +119,13 @@
     "link": { "label": "How authorisation works", "href": null, "status": "unresolved: no destination in the pack" }
   },
   "proven": {
-    "_source": "PDF p2, 6. PROVEN IN THE FIELD (C-03: section not in the contest announcement)",
+    "_source": "PDF p2, 6. PROVEN IN THE FIELD (C-03: not in the announcement's six sections). The single PDF paragraph is presented as its three complete sentences, in order.",
     "heading": "Proven in the field",
-    "paragraph": "ABZ Innovation's case studies show what the C10 delivers in service. A factory facade was cleaned at around 300 square metres an hour using chemical-free reverse osmosis water. A roof carrying ten years of moss, about 550 square metres, was cleared in roughly three hours with no chemicals, and the system was set up and ready to fly in fifteen minutes.",
+    "intro": "ABZ Innovation's case studies show what the C10 delivers in service.",
+    "articles": [
+      "A factory facade was cleaned at ((around [[300]] square metres an hour)) using chemical-free reverse osmosis water.",
+      "A roof carrying ten years of moss, ((about [[550]] square metres,)) was cleared in roughly three hours with no chemicals, and the system was set up and ready to fly in fifteen minutes."
+    ],
     "qualification": "Figures are from ABZ Innovation case studies. Actual output varies with the surface, the level of soiling and site conditions."
   },
   "enquiry": {

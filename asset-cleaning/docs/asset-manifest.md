@@ -1,6 +1,6 @@
 # Asset manifest
 
-Status: internal AI-assisted prototype. Every file below was opened and inspected visually (images at full resolution where identification mattered, PDFs page by page, video frame by frame at 3 s intervals). Descriptions are deliberately conservative.
+Status: internal AI-assisted prototype (V2 composition). Every file below was opened and inspected visually (images at full resolution where identification mattered, PDFs page by page, video frame by frame at 3 s intervals). Descriptions are deliberately conservative.
 
 ## Where the pack is
 
@@ -33,18 +33,38 @@ No fonts, font licences, brand guidelines, icon sets, URLs list or transparent p
 | `PART1/C10_Datasheet.pdf` | 3-page "Specifications of C10" table (EU/US columns). | 3 pp A4 | PDF (Google Docs), 377,089 | Manufacturer data | Reference only: discrepancies logged |
 | `PART2/README.md` | 36 bytes, UTF-16 text "# Bespoke" (same as the repository README). Not a brand file. | n/a | Text | None | No |
 
-## Selected files and treatment
+## Files named in the V2 brief that are NOT in the supplied pack
 
-All derivatives are resized and re-encoded only: no retouching, compositing, generative fill or colour changes. EXIF (including the GPS block in the iPhone files) and video container metadata are stripped. The originals remain in the archives.
+V2 §4 lists these as sources. They are absent from both archives, from the repository and from the uploads in this session, so they could not be inspected or used:
 
-| Use | Source | Derivatives | Desktop crop / focal point | Mobile crop / focal point | Alt text or label |
-| --- | --- | --- | --- | --- | --- |
-| Header logo | `BionicEyeLogoLargeBlack2.ai` | `assets/logo/bionic-eye-logo-black.svg` (pdftocairo SVG; only the `viewBox` trimmed to artwork bounds plus a 12 pt margin; paths and fill `rgb(29,29,27)` untouched) | 72 px high | 54 px high | "The Bionic Eye" |
-| Footer logo | `BionicEyeLogoLargeWhite.ai` | `assets/logo/bionic-eye-logo-white.svg` (same treatment) | 88 px high | 76 px high | "The Bionic Eye" |
-| Hero | `C10 3.jpg` | `assets/images/hero-facade-{800,1200,1600,2400}.{jpg,webp}` | `object-fit: cover`, position 64% 40%, box ≈ 813 × 490 at 1440 (bleeds to right edge): keeps facade, glazing, spray and drone | 4:3 (3:2 from 640 px), position 62% 35%, full-bleed | "A drone directing a water jet at the glazing of a stone-clad building, seen from below against a blue sky" |
-| Applications | `5f69a5e2-….MP4` | `assets/video/cladding-clean.mp4` (720 × 1280, H.264 CRF 30, AAC 96 kb/s, faststart, 4.3 MB); poster `cladding-clean-poster.jpg` = unaltered frame at 0.5 s | Native 9:16, columns 2–5 | Full content width, 9:16 | `aria-label`: "Video: a drone with a spray lance cleaning the white cladding of an industrial building, fed by a hose from the ground". `controls`, `preload="none"`, no autoplay |
-| The system | `C10-2.png` | `assets/images/c10-side-{900,1400,2000}.{jpg,webp}` | Uncropped 3:2 on a white plate, columns 1–6 | Uncropped, full content width | "The ABZ Innovation C10, side view, with its spray lance and hose connector" |
-| What we supply | `IMG_2240.JPG` | `assets/images/field-cladding-{800,1200,1600}.{jpg,webp}` | Uncropped 4:3, columns 1–5 | Uncropped 4:3, after the three paragraphs | "Two people on a gravel yard watching a drone spray the corrugated cladding of a green industrial building" |
+| V2 file | V2 role | Consequence |
+| --- | --- | --- |
+| `TBE_Cleaning_Van-Compressed2.mp4` | Primary support image (person, open van, equipment) | V2's named fallback `IMG_2240.JPG` is used for "What we supply" |
+| `IMG_2236.MOV` | Optional footage | Not used |
+| `C10 Short Low bitrate.mp4` | Optional video source | Not used |
+| `C10-Use-Case-Shorts-Final-Horizontal.mp4` | Optional video source | Not used |
+| `C10_Introduction_short.mp4` | Reference | Not used |
+| `ABZ Clean Station _ Full Setup & Operation Guide.mp4` | Technical reference | Not used |
+| `C10 Academy.mp4` | Technical reference | Not used |
+
+If the client supplies them, the support photograph should be re-evaluated against V2 §10.
+
+## Selected files and treatment (V2)
+
+All derivatives come from resizing, cropping, re-encoding or frame extraction only: no retouching, compositing, generative fill or colour change. EXIF (including the GPS block in the iPhone files) and video container metadata are stripped. The originals remain in the archives. Everything is produced by `scripts/prepare-assets.sh`.
+
+| Use | Source | Derivatives | Crop / focal point | Alt text or label |
+| --- | --- | --- | --- | --- |
+| Header logo | `BionicEyeLogoLargeBlack2.ai` | `assets/logo/bionic-eye-logo-black.svg` (pdftocairo; `viewBox` trimmed to artwork + 12 pt; fill `rgb(29,29,27)` untouched) | 64 px high desktop, 48 px mobile | "The Bionic Eye" |
+| Footer logo | `BionicEyeLogoLargeWhite.ai` | `assets/logo/bionic-eye-logo-white.svg` (same treatment) | 88 px desktop, 72 px mobile, on graphite | "The Bionic Eye" |
+| Hero | `C10 3.jpg` (6000 × 3376) | `assets/images/hero-facade-{800,1200,1600,2400,3200}.{jpg,webp}` | ≥ 1200 px: full-bleed behind the text, zoom 125 %, anchored top-left, ink overlay strongest at the left. < 1200 px: in-flow, full width, 250–480 px tall, focal 58 % / 30 % | "A drone directing a water jet at the glazing of a stone-clad building, seen from below against a blue sky" |
+| Applications poster | Frame at **1.0 s** of `5f69a5e2-….MP4` | `assets/images/cladding-frame-{480,720}.{jpg,webp}` (full 720 × 1280 frame) | 3:4 window, focal 50 % / 40 % | "A drone with a spray lance cleaning the white cladding of an industrial building, fed by a blue hose from the ground" |
+| Applications playback (on request only) | Same MP4 | `assets/video/cladding-clean.webm` (VP9/Opus, 4.7 MB) and `cladding-clean.mp4` (H.264 High 3.2/AAC, 4.3 MB), 720 × 1280 | Contained (letterboxed) in the 3:4 frame while playing | Play control named "Play video: a drone cleaning the cladding of an industrial building" |
+| The system | `C10-2.png` (8640 × 5760) | `assets/images/c10-plate-{700,1100,1400,2000}.{jpg,webp}` cropped to 7704 × 3520 at (120, 1264): product bounds (x 480–7464, y 1624–4424 at luminance < 240) + 360 px | Uncropped on the white plate | "The ABZ Innovation C10, side view, with its spray lance and hose connector" |
+| What we supply | `IMG_2240.JPG` (5712 × 4284) | `assets/images/field-cladding-{800,1200,1600}.{jpg,webp}` | 3:2 desktop, 4:3 mobile, centred | "Two people on a gravel yard watching a drone spray the corrugated cladding of a green industrial building" |
+| Font | Titillium Web 400/600/700 (google/fonts) | `assets/fonts/titillium-web/*.woff2` + TTF masters + `OFL.txt` | n/a | n/a |
+
+**Poster frame selection.** 77 frames were extracted at 2 fps from the original clip and scored by the variance of the Laplacian (sharpness) over the upper 60 % of the frame. The top candidates (0.0–2.5 s, 6.5 s, 27–29 s) were reviewed visually. 1.0 s was chosen because the whole drone is in frame, the jet is clearly visible, and soiled and cleaned cladding are both shown. Frames with the drone cut off at the top edge (27–29 s) were rejected.
 
 ## Things the pack does not establish
 

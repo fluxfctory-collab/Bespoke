@@ -1,84 +1,77 @@
-# Brand decisions
+# Brand decisions (V2, "Operational precision")
 
-Status: internal AI-assisted prototype (`usage_mode: internal_prototype`). These are design proposals built on the supplied evidence; none has been confirmed by The Bionic Eye.
+Status: internal AI-assisted prototype. V2 (`sources/BIONIC_EYE_ASSET_CLEANING_REDESIGN_V2.md`) replaces the V1 monochrome direction entirely. V1 remains in git history (commit `7a1823a`).
 
-## 1. Logo
+## 1. Evidence for the brand baseline
 
-| Decision | Evidence |
+| Decision | Source | Verified here? |
+| --- | --- | --- |
+| Graphite `#29333C`, cyan `#00BFF3`, Titillium Web | V2 brief §2: observed by the brief's author on the live homepage (computed styles) | **No.** `www.thebioniceye.co.uk` is blocked by this environment's egress policy (proxy 403, recorded in the proxy's failure log). The values are used as V2 instructs, as an observed baseline, not as an official brand manual. |
+| `#112634`, `#F3F7F9`, `#54636F`, `#E0E8ED`, `#00758F`, `#7B8B98` | V2 §2 and §5: proposed interface extensions | n/a (proposals) |
+| Logo artwork | Supplied `BionicEyeLogoLargeBlack2.ai` / `BionicEyeLogoLargeWhite.ai` → SVG (V1 process: only the `viewBox` trimmed to the artwork; fills untouched) | Yes |
+| V1 finding still true | The supplied logo files are single-ink (CMYK 0/0/0/100 and white). The pack contains no colour guide; cyan and graphite come only from V2's website observation. | Yes |
+
+V2 cautions that the live site's wordmark is not interchangeable with the supplied eye-logo artwork. Only the supplied artwork is used.
+
+## 2. Typeface
+
+| Item | Decision |
 | --- | --- |
-| Light surfaces use `BionicEyeLogoLargeBlack2.ai`, dark surfaces use `BionicEyeLogoLargeWhite.ai` | The pack supplies exactly these two variants. The brochure (p14, p13) shows the same lockup in black and white. |
-| Logo converted to SVG with `pdftocairo`; only the `viewBox` was trimmed to the artwork (+12 pt) | Paths, proportions and fill are unchanged. No redrawing, recolouring or separation of the tagline. |
-| Header logo 72 px high at desktop, 54 px on mobile | The supplied lockup is stacked and wide-spaced; at these sizes the wordmark is legible but the tagline "UNMANNED & UNMATCHED" is only about 4 px high. **Needs client input:** a horizontal or small-size lockup for the header, or approval to omit the tagline at small sizes. |
+| Family | Titillium Web, self-hosted |
+| Source | Official Google Fonts repository, `github.com/google/fonts`, path `ofl/titilliumweb`, commit `5e8a3ba899557829a76cfdac30fa512bda91d7ca` (7 Oct 2026), fetched by sparse `git clone` |
+| Licence | SIL Open Font License 1.1 (`assets/fonts/titillium-web/OFL.txt`, shipped with the fonts); copyright Accademia di Belle Arti di Urbino; no Reserved Font Name declared |
+| Weights shipped | 400, 600, 700 only (V2 §5). The TTF masters stay in the repository; the page loads lossless WOFF2 wrappers of the full glyph set (456 glyphs each, `fontTools`), and preloads 400 and 700. |
+| Verification | QA checks `document.fonts` for all three faces as `loaded`, and `document.fonts.check()` at every tested width before any capture (V2 §16: "do not export the fallback font") |
 
-## 2. Colour
+Type scale (fluid between the 390 and 1440 references):
 
-**Finding:** The Bionic Eye identity, as supplied, is monochrome. Both logo files use one fill: CMYK 0/0/0/100 (black version) and 0/0/0/0 (white version). The Illustrator swatch list only contains Illustrator's default swatches. The SVG conversion renders the black through the file's colour profile as `rgb(29, 29, 27)` = **#1D1D1B**.
-
-The orange in `C10 Brochure.pdf` and on the drone shell is **ABZ Innovation's** identity (the brochure's "ABZ INNOVATION – WE BUILD DRONES" pages). It is not used as a Bionic Eye colour. It appears on the page only where it exists in the photographs.
-
-| Token | Value | Source | Use | Contrast (measured) |
-| --- | --- | --- | --- | --- |
-| `--ink` | `#1D1D1B` | **Brand**: logo ink, CMYK 0/0/0/100 | Headings, body text, primary button, system section and footer surfaces, focus ring on light surfaces | 16.88:1 on white; 14.93:1 on stone |
-| `--paper` | `#FFFFFF` | Brand (white logo / knock-out) | Header, main surfaces, input fields, text on ink | 16.88:1 on ink |
-| `--stone` | `#F1F1EF` | Working UI value (neutral, slightly warm to sit with the ink) | Alternate section surface | n/a |
-| `--text-2` | `#5A5A57` | Working UI value | Case-study qualification | 6.92:1 on white, 6.12:1 on stone |
-| `--on-ink-2` | `#BDBDB8` | Working UI value | Spec labels, footer text on ink | 8.95:1 on ink |
-| `--rule` | `#D2D2CE` | Working UI value | Decorative dividers only | 1.52:1 (decorative, not a control boundary) |
-| `--rule-strong` | `#767672` | Working UI value | Input borders | 4.56:1 on white field, 4.03:1 on stone section |
-| `--ink-hover` | `#3D3D3A` | Working UI value | Primary button hover | white text 10.90:1 |
-| `--focus` | `--ink` on light, `#FFFFFF` on ink | Contrast-tested | 3 px outline, 3 px offset | ≥14.9:1 against every surface used |
-
-No chromatic accent was added. Introducing one would mean inventing a brand colour. If the client has a palette beyond the logo, it should replace this section.
-
-## 3. Typeface
-
-| Decision | Evidence and reasoning |
-| --- | --- |
-| `Arial, Helvetica, sans-serif` | No font files or licences were supplied. The brief's policy for that case is a local system stack. Nothing is downloaded. |
-| Not used: Aileron | Aileron-Light is embedded as a subset inside both logo files (for the tagline), so it is part of the identity. It was not supplied as a font, and its licence for web use wasn't provided. **Proposal for the client:** confirm whether Aileron (or the wordmark face) should be the web typeface. |
-| Rendering in this environment | The QA browser resolves Arial to **Liberation Sans** (metric-compatible). Screenshots therefore show Liberation Sans glyphs; on Windows/macOS the page renders in Arial/Helvetica with the same line breaks. |
-| One family, two weights (400, 700) | Matches the brief: one family before considering a second. |
-| Tabular numerals on spec values | `font-variant-numeric: tabular-nums` (Arial and Liberation Sans figures are tabular by default). |
-
-Type scale (fluid between 390 and 1440 px):
-
-| Role | 390 px | 1440 px | Line height |
+| Role | 1440 | 390 | Weight |
 | --- | --- | --- | --- |
-| H1 | 40 px | 66 px | 1.05, −0.025 em |
-| H2 | 30 px | 42 px | 1.08, −0.02 em |
-| Lead (supply lead, enquiry paragraph) | 21 px | 27 px | 1.38 |
-| Case-study statement | 22 px | 30 px | 1.4 |
-| Body | 17 px | 19 px (18 px from 768) | 1.6 |
-| Spec values | 21 px | 26 px | 1.25 |
-| Labels, qualification, footer | 15 px | 15–16 px | 1.4–1.6 |
+| Hero H1 | 72 / 75.6 | 40 / 42 (V2: 42; 2 px optical adjustment so the headline sets in three lines in 350 px) | 700, −0.02 em |
+| H2 | 48 / 53 | 34 / 38 | 700, −0.01 em |
+| Regulation panel H2 | 38 / 43 | 30 / 34 | 700 |
+| Service lead, enquiry introduction | 28 / 37 | 24 / 32 | 600 |
+| Body | 18 / 28 | 17 / 27 | 400 |
+| Applications entry | 21 / 29 | 20 / 28 | 600 |
+| Specification numeral | 48 / 52 | 38 / 41 | 700, tabular lining figures |
+| Secondary figure (`255`, `Radar,`) | 34 | 28 | 700 |
+| Qualifier and unit | 22 / 29 | 19 / 25 | 600 |
+| Specification label | 15 / 21 | 15 / 21 | 600 |
+| Navigation, form label | 16 / 22 | 16 / 22 | 600 |
+| CTA | 17 / 22 | 17 / 22 | 600 |
+| Evidence figure | 60 | 44 | 700 |
+| Legal / qualification | 15 / 23 (company line 14 / 22) | same | 400 |
 
-Measures are capped at about 36 em for body copy (≈ 65–72 characters).
+## 3. Colour roles and measured contrast
 
-## 4. Grid and spacing
+| Pair | Ratio | Use |
+| --- | --- | --- |
+| Ink `#112634` on cyan `#00BFF3` | 7.22:1 | All primary CTAs (never white on cyan, which is 2.15:1) |
+| Ink on cyan hover `#5AD6F7` | 9.18:1 | CTA hover (a lighter cyan step; proposal) |
+| White on graphite `#29333C` | 12.86:1 | Mobile hero, regulation panel, footer headings |
+| `#C9D4DC` on graphite | 8.53:1 | Footer body text (proposal) |
+| Cyan on graphite | 5.97:1 | Footer links, outline button on the regulation panel |
+| Ink on white / on `#F3F7F9` | 15.55:1 / 14.42:1 | Body text |
+| `#54636F` on white / on `#F3F7F9` | 6.19:1 / 5.75:1 | Labels, qualification |
+| `#00758F` on white / on `#F3F7F9` | 5.33:1 / 4.94:1 | Focus ring and hover links on light surfaces |
+| `#7B8B98` control border on white | 3.51:1 | Form field boundaries (WCAG 1.4.11 needs 3:1) |
+| Cyan on white | 2.15:1 | Decorative rule only (top of the applications matrix) |
 
-- Content width 1280 px; gutter `clamp(20px, 5.714vw - 2.29px, 80px)`: 80 px at 1440 and 20 px at 390 (350 px usable).
-- 12 columns, gap `clamp(16px, 2.25vw, 32px)` = 32 px at 1440.
-- **One shared text line:** every right-hand text column starts at column 7 (x = 736 at 1440): Applications list, system copy and specs, supply copy, regulatory copy, enquiry form. The hero is the deliberate exception: its photograph starts at column 6 and bleeds to the right-hand viewport edge.
-- Section padding `clamp(56px, 4.6vw + 38px, 104px)` = 104 px at 1440 and 56 px at 390.
-- Radius 6 px on controls, image frames and the product plate; no shadows except the open mobile menu, where it shows elevation.
-- Spacing values: 4, 8, 12, 16, 20, 24, 28, 32, 40, 48, 56, 64, 80, 104.
+Hero text over the photograph is measured separately, from pixels: see `docs/qa-report.md`.
+
+Cyan appears only in purposeful places: the CTAs, the applications matrix rule, the play control, the regulation panel's button, focus rings on dark surfaces and the footer links.
+
+## 4. Grid
+
+- `.wrap` = `min(1296px, 100% − 2 × gutter)`. Gutter tokens: 20 px (< 640), 28 (≥ 640), 32 (≥ 768), 40 (≥ 1024), 48 (≥ 1280). At 1440 the 1296 px cap leaves exactly 72 px either side; at 390 the content is 350 px.
+- 12 columns with 24 px gaps at 1440 (column 86 px). Splits: applications 8 + 4 columns; system plate 58 % / 42 % with a 56 px gap; support 5 fr / 7 fr with 56 px; enquiry 5 fr / 7 fr with 64 px.
+- Radii: 6 px buttons, 8 px inputs and the qualified applications entry, 16 px panels and contained photographs. The hero and full-width sections have square edges.
 
 ## 5. Image decisions
 
-| Section | File | Why |
-| --- | --- | --- |
-| Hero | `C10 3.jpg` | The only supplied image that shows facade, glazing and the drone working together, matching the opening sentence about "facade, glazing, cladding". High resolution allows a right-bleed crop. |
-| Applications | Video `5f69a5e2-….MP4` | Real footage of cladding being cleaned from the ground, with soiling and cleaned areas visible. It suits the list ("Industrial silos, tanks and cladding"; facades). It is not placed beside the case-study figures because nothing ties it to those case studies. |
-| The system | `C10-2.png` | Clear side view of the product, lance and hose connector. Pure-white studio ground, shown as a white plate in the dark section. |
-| What we supply | `IMG_2240.JPG` | Operation from ground level with crew on site; supports the equipment-and-support section without implying training or any specific service. |
-
-## 6. Design plan and self-review (frontend-design skill, two passes)
-
-**Plan.** Colour: ink #1D1D1B, paper #FFFFFF, stone #F1F1EF, text-2 #5A5A57, rule #D2D2CE. Type: one grotesque family, bold headlines with tight tracking, regular body. Layout: a strict 12-column grid with one shared text line; the operational photograph is the single bold move (full-height, bleeding off the right edge); the system section is the one dark panel, laid out like a datasheet beside a product plate. Principles: the photographs bring the colour; the type stays black and plain; structure (rules, label/value rows) appears only where the content is a list or a specification.
-
-**Review against generic defaults, and what changed:**
-- A "near-black background with one bright accent" was avoided: there is no accent at all, because the identity has none.
-- No eyebrow labels, all-caps labels, numbered markers, arrows on buttons or card grids. The applications are a ruled list, not seven cards.
-- First build: the right-hand text columns started on two different grid lines (columns 6 and 7). Changed to a single column-7 line across the page.
-- First build: the case-study figures were bold. On screen the paragraph read patchy, and bolding "300 square metres an hour" without "around" risked making the figure look stronger than the source. Emphasis removed; the full statement stays at display size, with its qualification directly beneath.
-- Regulatory paragraph: the operator/supplier sentence is bold, because it is the legal distinction the brief asks to keep explicit.
+| Section | File | Crop | Why |
+| --- | --- | --- | --- |
+| Hero | `C10 3.jpg` (6000 × 3376) | Desktop ≥ 1200 px: full-bleed, image zoomed to 125 % and anchored top-left, so the drone (≈ 72 % across) and jet sit right of the 636 px text column from 1200 to 1920 px. Mobile/tablet: full-width in-flow photo 250–480 px tall, focal 58 % / 30 % | The only supplied image combining drone, jet and glazed facade. Below 1200 px the overlay composition would put the jet behind the text, so the stacked V2 mobile composition is used |
+| Applications | Frame at 1.0 s of `5f69a5e2-….MP4` (720 × 1280) | 3:4 window, focal 50 % / 40 % | Chosen from 77 candidate frames by sharpness score and visual review: whole drone, visible jet, soiling and cleaned areas |
+| The system | `C10-2.png` cropped to product bounds + 360 px (7704 × 3520) | Uncropped within the plate (`width: 100%`) | Whole silhouette; the crop removes empty studio space, the corner vignette and a thin grey line on the original's top and left edges, so the white ground matches the white plate |
+| What we supply | `IMG_2240.JPG` (fallback named by V2; the van footage it prefers is not in the pack) | 3:2 desktop, 4:3 mobile, centred | Real operation from ground level; no caption, no claim about training or case studies |

@@ -15,7 +15,7 @@ import sys
 from playwright.sync_api import sync_playwright
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-WIDTHS = [1440, 1280, 1024, 768, 390, 360, 320]
+WIDTHS = [1920, 1440, 1280, 1200, 1024, 900, 768, 390, 360, 320]
 ZOOM_WIDTHS = [720, 640]  # 1440 and 1280 at 200% zoom
 
 # Strings that must appear on the page. Each is first verified against the PDF text,
@@ -171,6 +171,13 @@ def audit_width(browser, base, width, outdir, report, full_checks):
     r["page_errors"] = errors
     r["failed_requests"] = failed
     r["page_height"] = page.evaluate("document.documentElement.scrollHeight")
+    r["fonts"] = page.evaluate(
+        """() => ({ faces: Array.from(document.fonts).map(f => f.family + ' ' + f.weight + ' ' + f.status),
+                    ok: ['400', '600', '700'].every(w => document.fonts.check(w + ' 20px "Titillium Web"')),
+                    body: getComputedStyle(document.body).fontFamily })"""
+    )
+    if width >= 1200:
+        r["hero_text_contrast"] = hero_contrast(page, width, outdir)
     r["skip_link_hidden_unfocused"] = page.evaluate(
         "(() => { const r = document.querySelector('.skip-link').getBoundingClientRect(); return r.width <= 1 && r.height <= 1; })()"
     )
@@ -196,6 +203,74 @@ def audit_width(browser, base, width, outdir, report, full_checks):
         r.update(deep_checks(page, width, outdir))
     report["widths"].append(r)
     ctx.close()
+
+
+def hero_contrast(page, width, outdir):
+    """WCAG contrast of the hero's white text against the real photograph + overlay.
+
+    Hides the text, captures the hero, and for every rendered text line compares white with the
+    95th-percentile-luminance background pixel inside that line's box (a near-worst case)."""
+    import io
+    import numpy as np
+    from PIL import Image
+
+    page.evaluate("window.scrollTo(0, 0)")
+    boxes = page.evaluate(
+        """() => ['.hero__title', '.hero__copy p:not(.hero__action)'].flatMap(sel =>
+            Array.from(document.querySelectorAll(sel)).map(el => {
+              const range = document.createRange(); range.selectNodeContents(el);
+              const rects = Array.from(range.getClientRects()).filter(r => r.width > 2 && r.height > 2)
+                .map(r => [r.left, r.top + scrollY, r.right, r.bottom + scrollY]);
+              return { sel, size: parseFloat(getComputedStyle(el).fontSize), color: getComputedStyle(el).color, rects };
+            }))"""
+    )
+    page.add_style_tag(content=".hero__title, .hero__copy p:not(.hero__action) { visibility: hidden !important; }")
+    hero = page.evaluate("(() => { const r = document.querySelector('.hero').getBoundingClientRect(); return [r.left, r.top + scrollY, r.width, r.height]; })()")
+    shot = page.screenshot(full_page=True, clip={"x": hero[0], "y": hero[1], "width": hero[2], "height": hero[3]})
+    page.evaluate("document.querySelectorAll('style').forEach(s => { if (s.textContent.includes('visibility: hidden !important')) s.remove(); })")
+    img = np.asarray(Image.open(io.BytesIO(shot)).convert("RGB"), dtype=float) / 255.0
+    Image.open(io.BytesIO(shot)).save(outdir / f"hero-background-{width}.png")
+    lin = np.where(img <= 0.03928, img / 12.92, ((img + 0.055) / 1.055) ** 2.4)
+    lum = 0.2126 * lin[..., 0] + 0.7152 * lin[..., 1] + 0.0722 * lin[..., 2]
+    out = []
+    for b in boxes:
+        worst = None
+        for (x0, y0, x1, y1) in b["rects"]:
+            ya, yb = int(max(0, y0 - hero[1])), int(min(lum.shape[0], y1 - hero[1]))
+            xa, xb = int(max(0, x0)), int(min(lum.shape[1], x1))
+            region = lum[ya:yb, xa:xb]
+            if region.size == 0:
+                continue
+            l95 = float(np.percentile(region, 95))
+            ratio = (1.0 + 0.05) / (l95 + 0.05)
+            worst = ratio if worst is None else min(worst, ratio)
+        large = b["size"] >= 24
+        out.append({"element": b["sel"], "font_px": b["size"], "worst_ratio_p95": round(worst, 2) if worst else None,
+                    "required": 3.0 if large else 4.5, "pass": bool(worst and worst >= (3.0 if large else 4.5))})
+    return out
+
+
+def video_check(browser, base):
+    """The play button must swap the poster for a real, playing video."""
+    ctx = browser.new_context(viewport={"width": 1440, "height": 900})
+    page = ctx.new_page()
+    errors = []
+    page.on("pageerror", lambda e: errors.append(str(e)))
+    page.goto(base)
+    page.wait_for_load_state("networkidle")
+    btn = page.locator(".play-button")
+    res = {"button_visible": btn.is_visible(), "button_name": btn.evaluate("b => b.textContent.trim()")}
+    btn.click()
+    page.wait_for_timeout(2500)
+    res.update(page.evaluate(
+        """() => { const v = document.querySelector('.applications__media video');
+            return v ? { video: true, currentSrc: v.currentSrc.split('/').pop(), currentTime: Math.round(v.currentTime * 10) / 10,
+                         paused: v.paused, error: v.error && v.error.code, controls: v.controls,
+                         focused: document.activeElement === v } : { video: false }; }"""
+    ))
+    res["errors"] = errors
+    ctx.close()
+    return res
 
 
 def deep_checks(page, width, outdir):
@@ -354,6 +429,7 @@ def main():
         for w in WIDTHS + ZOOM_WIDTHS:
             audit_width(browser, a.base, w, outdir, report, full_checks=w in (1440, 390))
         report["menu"] = menu_checks(browser, a.base, outdir)
+        report["video"] = video_check(browser, a.base)
         if a.export:
             report["exports"] = export(browser, a.base, pathlib.Path(a.export))
         browser.close()
