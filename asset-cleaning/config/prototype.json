@@ -1,0 +1,15 @@
+{
+  "_note": "Provisional internal-draft choices. None of these has been confirmed by the contest organiser. See docs/source-decisions.md (C-01, C-02, C-03).",
+  "usage_mode": "internal_prototype",
+  "submission_status": "not_submission_ready",
+  "section_order": "announcement",
+  "section_orders": {
+    "announcement": ["hero", "applications", "system", "supply", "regulation", "proven", "enquiry"],
+    "pdf": ["hero", "system", "applications", "supply", "regulation", "proven", "enquiry"]
+  },
+  "hero_cta": "Book a demonstration",
+  "closing_cta": "Discuss a requirement",
+  "include_proven_in_field": true,
+  "brand_tokens": "derive_from_supplied_assets",
+  "font_policy": "supplied_or_system"
+}

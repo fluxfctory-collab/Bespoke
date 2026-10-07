@@ -1,0 +1,307 @@
+Starting server 1/1: node scripts/serve.mjs
+Waiting for server on port 4173...
+Server ready on port 4173
+
+All 1 server(s) ready
+Running: /tmp/claude-0/-home-user-Bespoke/bcb830d0-08a7-5bad-a1b6-01b4fca707b2/scratchpad/venv/bin/python qa/qa.py --out qa/screenshots --export deliverables
+
+{
+  "expected_not_in_pdf": [],
+  "pdf_copy_not_covered": [],
+  "chromium": "141.0.7390.37",
+  "menu": {
+    "button_visible": true,
+    "expanded_initial": "false",
+    "nav_visible_initial": false,
+    "expanded_after_enter": "true",
+    "nav_visible_after_enter": true,
+    "focus_after_tab": "Support",
+    "expanded_after_escape": "false",
+    "focus_after_escape": "menu-button",
+    "expanded_after_link": "false",
+    "regulation_top_after_link": 16,
+    "expanded_after_outside_click": "false",
+    "reduced_motion_button_transition": "0s",
+    "reduced_motion_scroll_behavior": "auto",
+    "nojs_nav_visible": true,
+    "nojs_menu_button_visible": false,
+    "nojs_missing_copy": []
+  },
+  "exports": [
+    "desktop-1440-full-page.png",
+    "mobile-390-hero-and-applications.png",
+    "desktop-1440-full-page@2x.png",
+    "mobile-390-hero-and-applications@2x.png"
+  ]
+}
+{"width": 1440, "horizontal_overflow": false, "page_height": 5829, "contrast_min": 6.92, "missing_copy": 0, "not_rendered_visibly": [], "console": [], "errors": [], "contrast_failures": [], "clipped_text": []}
+{"width": 1280, "horizontal_overflow": false, "page_height": 5647, "contrast_min": 6.92, "missing_copy": 0, "not_rendered_visibly": [], "console": [], "errors": [], "contrast_failures": [], "clipped_text": []}
+{"width": 1024, "horizontal_overflow": false, "page_height": 5627, "contrast_min": 6.92, "missing_copy": 0, "not_rendered_visibly": [], "console": [], "errors": [], "contrast_failures": [], "clipped_text": []}
+{"width": 768, "horizontal_overflow": false, "page_height": 7441, "contrast_min": 6.92, "missing_copy": 0, "not_rendered_visibly": ["Solutions", "Support", "Regulation", "Sectors", "About Us", "Contact", "Shop"], "console": [], "errors": [], "contrast_failures": [], "clipped_text": []}
+{"width": 390, "horizontal_overflow": false, "page_height": 7728, "contrast_min": 6.92, "missing_copy": 0, "not_rendered_visibly": ["Solutions", "Support", "Regulation", "Sectors", "About Us", "Contact", "Shop"], "console": [], "errors": [], "contrast_failures": [], "clipped_text": [], "small_targets": []}
+{"width": 360, "horizontal_overflow": false, "page_height": 7865, "contrast_min": 6.92, "missing_copy": 0, "not_rendered_visibly": ["Solutions", "Support", "Regulation", "Sectors", "About Us", "Contact", "Shop"], "console": [], "errors": [], "contrast_failures": [], "clipped_text": [], "small_targets": []}
+{"width": 320, "horizontal_overflow": false, "page_height": 8162, "contrast_min": 6.92, "missing_copy": 0, "not_rendered_visibly": ["Solutions", "Support", "Regulation", "Sectors", "About Us", "Contact", "Shop"], "console": [], "errors": [], "contrast_failures": [], "clipped_text": [], "small_targets": []}
+{"width": 720, "horizontal_overflow": false, "page_height": 7417, "contrast_min": 6.92, "missing_copy": 0, "not_rendered_visibly": ["Solutions", "Support", "Regulation", "Sectors", "About Us", "Contact", "Shop"], "console": [], "errors": [], "contrast_failures": [], "clipped_text": []}
+{"width": 640, "horizontal_overflow": false, "page_height": 7266, "contrast_min": 6.92, "missing_copy": 0, "not_rendered_visibly": ["Solutions", "Support", "Regulation", "Sectors", "About Us", "Contact", "Shop"], "console": [], "errors": [], "contrast_failures": [], "clipped_text": []}
+{
+ "width": 1440,
+ "headings": [
+  "H1: Facade and structure cleaning without access equipment.",
+  "H2: Applications",
+  "H2: The system",
+  "H2: What we supply",
+  "H2: Regulatory position",
+  "H2: Proven in the field",
+  "H2: Enquiry"
+ ],
+ "first_tab": {
+  "text": "Skip to content",
+  "top": 8,
+  "visible": true
+ },
+ "tab_order": [
+  "A  | outline solid 3px",
+  "A Support | outline solid 3px",
+  "A Regulation | outline solid 3px",
+  "A Contact | outline solid 3px",
+  "A Shop | outline solid 3px",
+  "A Book a demonstration | outline solid 3px",
+  "VIDEO Video: a drone with a spray la | outline solid 3px",
+  "VIDEO Video: a drone with a spray la | outline none 0px",
+  "VIDEO Video: a drone with a spray la | outline none 0px",
+  "INPUT name | outline solid 3px",
+  "INPUT company | outline solid 3px",
+  "INPUT email | outline solid 3px"
+ ],
+ "hero_cta_enquiry_top": 16,
+ "form_submit": {
+  "requests_after_submit": [],
+  "url_unchanged": true,
+  "values_kept": true,
+  "status_text_present": false
+ },
+ "form": [
+  {
+   "id": "name",
+   "type": "text",
+   "autocomplete": "name",
+   "name": null,
+   "label": "Name",
+   "placeholder": null,
+   "height": 52
+  },
+  {
+   "id": "company",
+   "type": "text",
+   "autocomplete": "organization",
+   "name": null,
+   "label": "Company",
+   "placeholder": null,
+   "height": 52
+  },
+  {
+   "id": "email",
+   "type": "email",
+   "autocomplete": "email",
+   "name": null,
+   "label": "Email",
+   "placeholder": null,
+   "height": 52
+  },
+  {
+   "id": "telephone",
+   "type": "tel",
+   "autocomplete": "tel",
+   "name": null,
+   "label": "Telephone",
+   "placeholder": null,
+   "height": 52
+  },
+  {
+   "id": "sites",
+   "type": "textarea",
+   "autocomplete": "off",
+   "name": null,
+   "label": "Sites or work involved",
+   "placeholder": null,
+   "height": 169
+  }
+ ],
+ "ui_contrast": {
+  "input_border_vs_input_bg": 4.56,
+  "input_border_vs_section_bg": 4.03
+ },
+ "video": {
+  "controls": true,
+  "autoplay": false,
+  "preload": "none",
+  "muted": false,
+  "paused": true,
+  "label": "Video: a drone with a spray lance cleaning the white cladding of an industrial building, fed by a hose from the ground"
+ },
+ "images": [
+  {
+   "src": "bionic-eye-logo-black.svg",
+   "alt": "The Bionic Eye",
+   "w": 2273,
+   "rendered": 117
+  },
+  {
+   "src": "hero-facade-1200.webp",
+   "alt": "A drone directing a water jet at the glazing of a stone-clad building, seen from below against a blue sky",
+   "w": 892,
+   "rendered": 813
+  },
+  {
+   "src": "c10-side-900.webp",
+   "alt": "The ABZ Innovation C10, side view, with its spray lance and hose connector",
+   "w": 806,
+   "rendered": 624
+  },
+  {
+   "src": "field-cladding-800.webp",
+   "alt": "Two people on a gravel yard watching a drone spray the corrugated cladding of a green industrial building",
+   "w": 576,
+   "rendered": 515
+  },
+  {
+   "src": "bionic-eye-logo-white.svg",
+   "alt": "The Bionic Eye",
+   "w": 2273,
+   "rendered": 143
+  }
+ ]
+}
+{
+ "width": 390,
+ "headings": [
+  "H1: Facade and structure cleaning without access equipment.",
+  "H2: Applications",
+  "H2: The system",
+  "H2: What we supply",
+  "H2: Regulatory position",
+  "H2: Proven in the field",
+  "H2: Enquiry"
+ ],
+ "first_tab": {
+  "text": "Skip to content",
+  "top": 8,
+  "visible": true
+ },
+ "tab_order": [
+  "A  | outline solid 3px",
+  "BUTTON Menu | outline solid 3px",
+  "A Book a demonstration | outline solid 3px",
+  "VIDEO Video: a drone with a spray la | outline solid 3px",
+  "VIDEO Video: a drone with a spray la | outline none 0px",
+  "VIDEO Video: a drone with a spray la | outline none 0px",
+  "INPUT name | outline solid 3px",
+  "INPUT company | outline solid 3px",
+  "INPUT email | outline solid 3px",
+  "INPUT telephone | outline solid 3px",
+  "TEXTAREA sites | outline solid 3px",
+  "BUTTON Discuss a requirement | outline solid 3px"
+ ],
+ "hero_cta_enquiry_top": 16,
+ "form_submit": {
+  "requests_after_submit": [],
+  "url_unchanged": true,
+  "values_kept": true,
+  "status_text_present": false
+ },
+ "form": [
+  {
+   "id": "name",
+   "type": "text",
+   "autocomplete": "name",
+   "name": null,
+   "label": "Name",
+   "placeholder": null,
+   "height": 52
+  },
+  {
+   "id": "company",
+   "type": "text",
+   "autocomplete": "organization",
+   "name": null,
+   "label": "Company",
+   "placeholder": null,
+   "height": 52
+  },
+  {
+   "id": "email",
+   "type": "email",
+   "autocomplete": "email",
+   "name": null,
+   "label": "Email",
+   "placeholder": null,
+   "height": 52
+  },
+  {
+   "id": "telephone",
+   "type": "tel",
+   "autocomplete": "tel",
+   "name": null,
+   "label": "Telephone",
+   "placeholder": null,
+   "height": 52
+  },
+  {
+   "id": "sites",
+   "type": "textarea",
+   "autocomplete": "off",
+   "name": null,
+   "label": "Sites or work involved",
+   "placeholder": null,
+   "height": 169
+  }
+ ],
+ "ui_contrast": {
+  "input_border_vs_input_bg": 4.56,
+  "input_border_vs_section_bg": 4.03
+ },
+ "video": {
+  "controls": true,
+  "autoplay": false,
+  "preload": "none",
+  "muted": false,
+  "paused": true,
+  "label": "Video: a drone with a spray lance cleaning the white cladding of an industrial building, fed by a hose from the ground"
+ },
+ "images": [
+  {
+   "src": "bionic-eye-logo-black.svg",
+   "alt": "The Bionic Eye",
+   "w": 2273,
+   "rendered": 88
+  },
+  {
+   "src": "hero-facade-800.webp",
+   "alt": "A drone directing a water jet at the glazing of a stone-clad building, seen from below against a blue sky",
+   "w": 390,
+   "rendered": 390
+  },
+  {
+   "src": "c10-side-900.webp",
+   "alt": "The ABZ Innovation C10, side view, with its spray lance and hose connector",
+   "w": 390,
+   "rendered": 350
+  },
+  {
+   "src": "field-cladding-800.webp",
+   "alt": "Two people on a gravel yard watching a drone spray the corrugated cladding of a green industrial building",
+   "w": 390,
+   "rendered": 350
+  },
+  {
+   "src": "bionic-eye-logo-white.svg",
+   "alt": "The Bionic Eye",
+   "w": 2273,
+   "rendered": 123
+  }
+ ]
+}
+
+Stopping 1 server(s)...
+Server 1 stopped
+All servers stopped

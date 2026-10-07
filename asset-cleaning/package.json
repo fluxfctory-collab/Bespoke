@@ -1,0 +1,14 @@
+{
+  "name": "bionic-eye-asset-cleaning-prototype",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Internal AI-assisted prototype of The Bionic Eye Asset Cleaning page. Not a contest submission.",
+  "type": "module",
+  "scripts": {
+    "assets": "bash scripts/prepare-assets.sh",
+    "build": "node scripts/build.mjs",
+    "serve": "node scripts/serve.mjs",
+    "check": "node --check scripts/build.mjs && node --check scripts/serve.mjs && node --check src/page.js && node scripts/build.mjs"
+  },
+  "engines": { "node": ">=20" }
+}

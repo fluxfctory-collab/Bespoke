@@ -1,0 +1,7 @@
+# Local-scope Claude Code plugin enablement (machine-specific)
+.claude/settings.local.json
+# Extracted originals: the source archives remain in "Nouveau dossier/"
+asset-cleaning/source-pack/
+# Build output (regenerate with: npm run build)
+asset-cleaning/dist/
+node_modules/
